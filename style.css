@@ -1,0 +1,84 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    background-color: rgb(4, 4, 85);
+    text-align: center;
+}
+.menu li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: -4px;
+}
+.menu li:first-child a{
+    border-left: 1px solid #ddd;
+}
+.menu li a{
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    border-right: 1px solid #ddd;
+
+}
+.menu li:hover>a{
+    background-color: blue;
+}
+
+/* Drop Down menu  */
+.menu li{
+    position: relative;
+}
+.menu li ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: green;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    transform: scaley(0);
+    transform-origin: top center;
+}
+.menu li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+.menu li ul li{
+    display: block;
+    margin-left: 0;
+}
+.menu li ul li:first-child a{
+    border-left: 0;
+}
+.menu li ul li:first-child a{
+    border-top: 1px solid #ddd;
+}
+.menu li ul li a{
+    display: block;
+    border-right: 0;
+    border-bottom: 1px solid #ddd;
+}
+.menu li ul li a:hover{}
+
+/* sub drop down list  */
+
+.menu li ul li{
+   position: relative; 
+}
+.menu li ul li ul{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    background-color: blueviolet;
+    display: none; 
+}
+.menu li ul li:hover ul{
+    display: block;
+}
